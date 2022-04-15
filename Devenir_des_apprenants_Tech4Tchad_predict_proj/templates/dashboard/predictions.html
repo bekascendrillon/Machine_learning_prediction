@@ -1,0 +1,36 @@
+{% extends 'partials/base.html' %}
+
+		{%block title %} List Predictions {%endblock%}
+
+		{% block content %}
+			<div class="container">
+				<div class="row mt-4">
+					<div class="col-md-8 offset-md-2">
+						
+						<table class="table">
+							<thead>
+							  <tr>
+								<th scope="col">Name</th>
+								<th scope="col">Age</th>
+								<th scope="col">Sex</th>
+								<th scope="col">Niveau</th>
+								<th scope="col">Prediction</th>
+							  </tr>
+							</thead>
+							<tbody>
+							  {% for data in predicted_Devenir_des_apprenants_Tech4Tchad%}
+							  <tr>
+								<th scope="row">{{data.name}}</th>
+								<td>{{data.age}}</td>
+								<td>{{data.sex}}</td>
+								<td>{{data.niveau}}</td>
+								<td>{{data.predictions}}</td>
+							  </tr>
+							  {% endfor %}
+							</tbody>
+						  </table>
+
+					</div>
+				</div>
+			</div>
+		{%endblock%}
